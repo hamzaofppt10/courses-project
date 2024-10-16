@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import Users from '../users/Users';
 const initialState = {
     courses: []
 };
