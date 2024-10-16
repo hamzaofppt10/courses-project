@@ -10,7 +10,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white p-6 rounded shadow-lg w-1/3">
         <h2 className="text-2xl font-bold mb-4">Profile Details</h2>
-        <p><strong>userName:</strong> {user.username}</p>
+        <p><strong>User ame:</strong> {user.username}</p>
         <p><strong>Email:</strong> {user.email}</p>
         <p><strong>Phone:</strong> {user.phone}</p>
         <p><strong>Website:</strong> {user.website}</p>
