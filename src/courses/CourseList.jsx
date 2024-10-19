@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 const CourseList = () => {
   const isLoggedIn = useSelector(state => state.login.isLoggedIn)
   const status = useSelector(state => state.courses.status)
+  const error = useSelector(state => state.courses.error)
   const courses = useSelector(state => state.courses.courses)
   const dispatch = useDispatch()
   useEffect(() => {
@@ -26,6 +27,7 @@ const CourseList = () => {
 
       {isLoggedIn ? <div>
         {status === 'loading' ? <div className='min-h-screen w-screen flex items-center justify-center'> <Loader className='animate-spin ' /> </div> : null}
+        {status === 'failed' ? <div className='min-h-screen w-screen flex items-center justify-center'> {error} </div> : null}
         {status === 'succeeded' ?
           <div>
             <h1 className='text-center text-3xl font-bold'>Courses</h1>
