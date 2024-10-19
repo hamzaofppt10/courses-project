@@ -15,7 +15,7 @@ const fetchUsers = createAsyncThunk('login/fetchUsers', async () => {
 });
 
 const initialState = {
-    isLoggedIn: false,
+    isLoggedIn: true,
     user: null,
     users: []
 };
